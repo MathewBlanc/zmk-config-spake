@@ -9,6 +9,62 @@
 #define LMED 4
 
 / {
+
+	macros {
+        pths: parentheses {
+            label = "Double parentheses";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp LPAR &kp RPAR>
+                , <&kp LEFT>
+                ;
+        };
+	braces: braces {
+            label = "Double braces";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp LBRC &kp RBRC>
+                , <&kp LEFT>
+                ;
+        };
+	bkts: brackets {
+            label = "Double brackets";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp LBKT &kp RBKT &kp LEFT>
+                ;
+        };
+    	assign: assign {
+            label = "Assignment syntax";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp SPACE &kp EQUAL &kp SPACE>
+                ;
+        };
+	wh: wh {
+            label = "Assignment syntax";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp W &kp H>
+                ;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_COMMA {
@@ -119,7 +175,7 @@
             timeout-ms = <50>;
             key-positions = <5 12 13>;
 	    layers = <0>;
-            bindings = <&kp W &kp H>;
+            bindings = <&wh>;
         };
 	combo_tab2 {
             timeout-ms = <50>;
@@ -150,51 +206,6 @@
             key-positions = <5 6>;
 	    layers = <0>;
             bindings = <&mo LNUM>;
-        };
-    };
-    
-    macros {
-        pths: parentheses {
-            label = "Double parentheses";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-	    wait-ms = <40>;
-	    tap-ms = <40>;
-            bindings
-                = <&kp LPAR &kp RPAR>
-                , <&kp LEFT>
-                ;
-        };
-	braces: braces {
-            label = "Double braces";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-	    wait-ms = <40>;
-	    tap-ms = <40>;
-            bindings
-                = <&kp LBRC &kp RBRC>
-                , <&kp LEFT>
-                ;
-        };
-	bkts: brackets {
-            label = "Double brackets";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-	    wait-ms = <40>;
-	    tap-ms = <40>;
-            bindings
-                = <&kp LBKT &kp RBKT &kp LEFT>
-                ;
-        };
-    assign: assign {
-            label = "Assignment syntax";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-	    wait-ms = <40>;
-	    tap-ms = <40>;
-            bindings
-                = <&kp SPACE &kp EQUAL &kp SPACE>
-                ;
         };
     };
 
