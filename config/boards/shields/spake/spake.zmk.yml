@@ -1,0 +1,8 @@
+file_format: "1"
+id: spake
+name: spake
+type: shield
+url: https://github.com/MathewBlanc/zmk-config-spake/
+requires: [pro_micro]
+features:
+  - keys
