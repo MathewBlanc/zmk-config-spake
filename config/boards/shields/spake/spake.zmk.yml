@@ -3,6 +3,6 @@ id: spake
 name: spake
 type: shield
 url: https://github.com/MathewBlanc/zmk-config-spake/
-requires: [pro_micro]
+requires: [rpi_pico]
 features:
   - keys
