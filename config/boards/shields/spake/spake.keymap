@@ -350,7 +350,7 @@
         sym_layer {
             bindings = <
             	&tdexat		&kp GT    	&kp LT      &tdpar           &tdbrc		&tdbkt      &kp SLASH	&kp BACKSLASH
-                &tdhapc    	&tddlht    	&tdstnd	 	&kp SEMI         &kp COLON	&tdapqt		&kp MINUS	&kp ASSIGN
+                &tdhapc    	&tddlht    	&tdstnd	    &kp SEMI         &kp COLON	&tdapqt		&kp MINUS	&tdequal
                                         &none     	&kp LSHIFT       &kp TILDE	&trans
                 	>;
         };
