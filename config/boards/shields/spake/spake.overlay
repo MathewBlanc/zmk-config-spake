@@ -23,20 +23,20 @@
         diode-direction = "col2row";
 
         col-gpios
-            = <&pro_micro 26 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 28 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 29 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 27 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 5 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 3 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 4 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 6 GPIO_ACTIVE_HIGH>
+            = <&rpi_pico 26 GPIO_ACTIVE_HIGH>
+            , <&rpi_pico 28 GPIO_ACTIVE_HIGH>
+            , <&rpi_pico 29 GPIO_ACTIVE_HIGH>
+            , <&rpi_pico 27 GPIO_ACTIVE_HIGH>
+            , <&rpi_pico 5 GPIO_ACTIVE_HIGH>
+            , <&rpi_pico 3 GPIO_ACTIVE_HIGH>
+            , <&rpi_pico 4 GPIO_ACTIVE_HIGH>
+            , <&rpi_pico 6 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&pro_micro 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&rpi_pico 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&rpi_pico 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&rpi_pico 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 };
