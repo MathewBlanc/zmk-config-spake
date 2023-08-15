@@ -1,0 +1,6 @@
+if SHIELD_SPAKE
+
+config spake
+    default "My Board"
+
+endif
