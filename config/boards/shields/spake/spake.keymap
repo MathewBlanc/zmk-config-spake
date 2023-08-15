@@ -324,7 +324,7 @@
             label = "TAP_DANCE_EQUAL_PLUS_ASSIGN";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp EQUAL>, <&kp LS(EQUAL>, <&;
+            bindings = <&kp EQUAL>, <&kp LS(EQUAL)>, <&assign;
         };
     };
 
