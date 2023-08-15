@@ -1,6 +1,6 @@
 if SHIELD_SPAKE
 
-config spake
+config ZMK_KEYBOARD_NAME
     default "spake"
 
 endif
