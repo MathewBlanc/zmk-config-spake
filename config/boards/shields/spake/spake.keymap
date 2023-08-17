@@ -54,7 +54,7 @@
                 ;
         };
 	wh: wh {
-            label = "Assignment syntax";
+            label = "wh digraph";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 	    wait-ms = <40>;
@@ -277,21 +277,21 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_PAR";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&pths >, <&kp LPAR>, <&kp RPAR>;
         };
     tdbrc: tap_dance_braces {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BRACES";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&braces >, <&kp LBRC>, <&kp RBRC>;
         };
     tdbkt: tap_dance_bkt {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BKTS";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&bkts >, <&kp LBKT>, <&kp RBKT>;
         };
 
