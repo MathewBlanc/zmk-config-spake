@@ -346,7 +346,7 @@
         };
 	tdjcol: tap_dance_j_colon {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_Q_SEMI";
+            label = "TAP_DANCE_J_COLON";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp J>, <&kp COLON>;
