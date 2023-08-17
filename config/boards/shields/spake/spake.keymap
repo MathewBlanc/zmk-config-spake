@@ -97,7 +97,7 @@
             timeout-ms = <50>;
             key-positions = <0 1 2 >;
 	    layers = <0>;
-            bindings = <&kp Q>;
+            bindings = <&tdqsem>;
         };
 	combo_change_window {
             timeout-ms = <50>;
@@ -145,7 +145,7 @@
             timeout-ms = <50>;
             key-positions = <5 6 7>;
 	    layers = <0>;
-            bindings = <&kp J>;
+            bindings = <&tdjcol>;
         };
 	combo_f {
             timeout-ms = <50>;
@@ -336,6 +336,20 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp EQUAL>, <&kp LS(EQUAL)>, <&assign>;
+        };
+	tdqsem: tap_dance_q_semi {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_Q_SEMI";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&kp SEMI>;
+        };
+	tdjcol: tap_dance_j_colon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_Q_SEMI";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp J>, <&kp COLON>;
         };
     };
 
