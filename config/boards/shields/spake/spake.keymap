@@ -90,12 +90,12 @@
         compatible = "zmk,combos";
         combo_COMMA {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <4 5>;
             bindings = <&kp COMMA>;
         };
 	combo_PERIOD {
             timeout-ms = <50>;
-            key-positions = <4 5>;
+            key-positions = <2 3>;
             bindings = <&kp PERIOD>;
         };
 	combo_backspace {
@@ -369,14 +369,14 @@
             label = "TAP_DANCE_Q_SEMI";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&kp SEMI>;
+            bindings = <&kp Q>, <&kp COLON>;
         };
 	tdjcol: tap_dance_j_colon {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_J_COLON";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp J>, <&kp COLON>;
+            bindings = <&kp J>, <&kp SEMI>;
         };
     };
 
@@ -402,7 +402,7 @@
         sym_layer {
             bindings = <
             	&tdexat		&kp GT    	&kp LT      &tdpar           &tdbrc		&tdbkt      &kp SLASH	&kp BACKSLASH
-                &tdhapc    	&tddlht    	&tdstnd	    &kp SEMI         &kp COLON	&tdapqt		&kp MINUS	&tdequal
+                &tdhapc    	&tddlht    	&tdstnd	    &kp COLON         &kp SEMI	&tdapqt		&kp MINUS	&tdequal
                                         &none     	&kp LSHIFT       &kp TILDE	&trans
                 	>;
         };
