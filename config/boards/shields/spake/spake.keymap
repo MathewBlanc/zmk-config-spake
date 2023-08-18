@@ -64,6 +64,16 @@
                 = <&kp W &kp H>
                 ;
         };
+	ck: ck {
+            label = "ck digraph";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp C &kp K>
+                ;
+        };
 	carr: carriage_ret {
             label = "end_line_carriage_ret";
             compatible = "zmk,behavior-macro";
@@ -74,6 +84,26 @@
                 = <&kp LG(RIGHT) &kp ENTER>
                 ;
         };
+	carrbk: carriage_ret_back {
+            label = "end_line_carriage_ret_back";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp LG(RIGHT) &kp ENTER &kp LS(TAB)>
+                ;
+        };
+	carrfor: carriage_ret_forward {
+            label = "end_line_carriage_ret_forward";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp LG(RIGHT) &kp ENTER &kp TAB>
+                ;
+        };
 	hline: highlight_line {
             label = "highlight_line";
             compatible = "zmk,behavior-macro";
@@ -82,6 +112,16 @@
 	    tap-ms = <40>;
             bindings
                 = <&kp LG(RIGHT) &kp LG(LS(LEFT))>
+                ;
+        };
+	iapo: i_apo {
+            label = "highlight_line";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+	    wait-ms = <40>;
+	    tap-ms = <40>;
+            bindings
+                = <&kp LS(I) &kp APOSTROPHE>
                 ;
         };
     };
@@ -118,7 +158,7 @@
             timeout-ms = <50>;
             key-positions = <0 1 2 >;
 	    layers = <0>;
-            bindings = <&tdqsem>;
+            bindings = <&tdqcol>;
         };
 	combo_change_window {
             timeout-ms = <50>;
@@ -154,7 +194,7 @@
             timeout-ms = <50>;
             key-positions = <2 10>;
 	    layers = <0>;
-            bindings = <&kp K>;
+            bindings = <&tdck>;
         };
 	combo_ret2 {
             timeout-ms = <50>;
@@ -166,7 +206,7 @@
             timeout-ms = <50>;
             key-positions = <5 6 7>;
 	    layers = <0>;
-            bindings = <&tdjcol>;
+            bindings = <&tdjsem>;
         };
 	combo_f {
             timeout-ms = <50>;
@@ -300,6 +340,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp N9>, <&kp F9>;
         };
+	tdck: tap_dance_ck {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CK";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp K>, <&ck>;
+        };
     tdpar: tap_dance_par {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_PAR";
@@ -364,19 +411,26 @@
             tapping-term-ms = <200>;
             bindings = <&kp EQUAL>, <&assign>;
         };
-	tdqsem: tap_dance_q_semi {
+	tdqcol: tap_dance_q_colon {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_Q_SEMI";
+            label = "TAP_DANCE_Q_COLON";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp Q>, <&kp COLON>;
         };
-	tdjcol: tap_dance_j_colon {
+	tdjsem: tap_dance_j_semi {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_J_COLON";
+            label = "TAP_DANCE_J_SEMI";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp J>, <&kp SEMI>;
+        };
+	tdiapo: tap_dance_i_apo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_I_APO";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp I>, <&iapo>;
         };
     };
 
@@ -386,7 +440,7 @@
         alpha_layer {
             bindings = <
             	&kp M		&kp P    	&kp L       &kp D            &kp C		&kp R       &kp U		&kp G
-                &kp A    	&kp O    	&kp E	 	&kp I            &kp H		&kp T		&kp N		&kp S
+                &kp A    	&kp O    	&kp E	 	&tdiapo            &kp H		&kp T		&kp N		&kp S
                                         &kp LGUI 	&mo LNAV         &kp LSHIFT	&mo LSYM
                 	>;
         };
@@ -401,7 +455,7 @@
 
         sym_layer {
             bindings = <
-            	&tdexat		&kp GT    	&kp LT      &tdpar           &tdbrc		&tdbkt      &kp SLASH	&kp BACKSLASH
+            	&tdexat		&kp LT    	&kp GT      &tdpar           &tdbrc		&tdbkt      &kp SLASH	&kp BACKSLASH
                 &tdhapc    	&tddlht    	&tdstnd	    &kp COLON         &kp SEMI	&tdapqt		&kp MINUS	&tdequal
                                         &none     	&kp LSHIFT       &kp TILDE	&trans
                 	>;
@@ -410,7 +464,7 @@
         num_layer {
             bindings = <
             	&td1		&td2    	&td3        &td4            &kp F10		&kp F11      &kp F12	&none
-                &td5    	&td6    	&td7     	&td8            &kp PERIOD	&kp COMMA	&kp N		&none
+                &td5    	&td6    	&td7     	&td8            &kp PERIOD	&kp COMMA    &kp N	&kp ENTER
                                         &td9 	    &kp N0          &trans	    &trans
                 	>;
         };
@@ -425,8 +479,8 @@
 	
 	extension_layer {
             bindings = <
-            	&none	&none    &kp LA(MINUS)    &kp LA(LS(MINUS))       	&carr	&hline  &none	&none	
-                &none   &none  	 &kp LA(LS(N8))   &kp LA(LS(N9))		&none	&none   &none	&none
+            	&none	&none    &kp LA(MINUS)    &kp LA(LS(MINUS))       	&carrbk		&carr	  	 &carrfor	&hline	
+                &none   &none  	 &kp LA(LS(N8))   &kp LA(LS(N9))		&kp LG(MINUS)	&kp LG(EQUALS)   &none		&none
                                  &trans	  &none         			&none	&trans
                 	>;
         };
