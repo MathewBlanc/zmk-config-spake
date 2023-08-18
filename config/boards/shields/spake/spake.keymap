@@ -480,7 +480,7 @@
 	extension_layer {
             bindings = <
             	&none	&none    &kp LA(MINUS)    &kp LA(LS(MINUS))       	&carrbk		&carr	  	 &carrfor	&hline	
-                &none   &none  	 &kp LA(LS(N8))   &kp LA(LS(N9))		&kp LG(MINUS)	&kp LG(EQUALS)   &none		&none
+                &none   &none  	 &kp LA(LS(N8))   &kp LA(LS(N9))		&kp LG(MINUS)	&kp LG(EQUAL)   &none		&none
                                  &trans	  &none         			&none	&trans
                 	>;
         };
