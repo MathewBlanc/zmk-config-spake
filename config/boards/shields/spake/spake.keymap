@@ -429,7 +429,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_I_APO";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <200>;
             bindings = <&kp I>, <&iapo>;
         };
     };
@@ -463,7 +463,7 @@
 
         num_layer {
             bindings = <
-            	&td1		&td2    	&td3        &td4            &kp F10		&kp F11      &kp F12	&none
+            	&td1		&td2    	&td3        &td4            &kp F10		&kp F11      &kp F12	&tog LNUM
                 &td5    	&td6    	&td7     	&td8            &kp PERIOD	&kp COMMA    &kp N	&kp ENTER
                                         &td9 	    &kp N0          &trans	    &trans
                 	>;
