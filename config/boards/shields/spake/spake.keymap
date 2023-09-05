@@ -440,7 +440,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_I_APO";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp I>, <&ispace>, <&iapo>;
         };
     };
