@@ -430,7 +430,7 @@
             label = "TAP_DANCE_I_APO";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp I>, <&iapo>;
+            bindings = <&kp I>, <&kp LS(I)>, <&iapo>;
         };
     };
 
@@ -448,8 +448,8 @@
         nav_layer {
             bindings = <
             	&kp ESC		&kp LG(X)	&kp LG(V)   &kp LG(C)        &kp LA(BSPC) &kp UP    &kp LA(DEL)	&kp DEL
-                &kp RCTRL   &sk LSHIFT  &sk RALT 	&sk RGUI	     &kp LEFT	  &kp DOWN	&kp RIGHT	&kp LG(Z)
-                                        &kp TAB 	&trans           &kp TAB	  &kp GRAVE
+                &kp RCTRL   &sk LSHIFT  &sk RALT 	&sk RGUI	     &kp LEFT	  &kp DOWN	&kp RIGHT	&kp LG(LS(SPACE))
+                                        &kp TAB 	&trans           &kp C_AC_SCROLL_DOWN	  &kp C_AC_SCROLL_UP
                 	>;
         };
 
