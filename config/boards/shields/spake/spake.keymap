@@ -8,6 +8,7 @@
 #define LNUM 3
 #define LMED 4
 #define LEXT 5
+#define LWIN 6
 
 / {
 
@@ -256,13 +257,13 @@
 	    layers = <0>;
             bindings = <&mo LMED>;
         };
-	combo_layer_num {
+	combo_layer_win {
             timeout-ms = <50>;
             key-positions = <18 19>;
 	    layers = <0>;
-            bindings = <&mo LNUM>;
+            bindings = <&mo LWIN>;
         };
-	combo_layer_num2 {
+	combo_layer_num {
             timeout-ms = <50>;
             key-positions = <5 6>;
 	    layers = <0>;
@@ -463,9 +464,9 @@
 
         num_layer {
             bindings = <
-            	&td1		&td2    	&td3        &td4            &kp F10		&kp F11      &kp F12	&tog LNUM
-                &td5    	&td6    	&td7     	&td8            &kp PERIOD	&kp COMMA    &kp N	&kp ENTER
-                                        &td9 	    &kp N0          &trans	    &trans
+            	&td1		&td2    	&td3        	&td4            &kp PERIOD	&trans      &trans	&kp ENTER
+                &td5    	&td6    	&td7     	&td8            &kp COMMA	&kp F10      &kp F11	&kp F12
+                                        	&td9 	    	&kp N0          &none	    	&none
                 	>;
         };
 
@@ -482,6 +483,13 @@
             	&none	&none    &kp LA(MINUS)    &kp LA(LS(MINUS))       	&carrbk		&carr	  	 &carrfor	&hline	
                 &none   &none  	 &kp LA(LS(N8))   &kp LA(LS(N9))		&kp LG(MINUS)	&kp LG(EQUAL)   &none		&none
                                  &trans	  &none         			&none	&trans
+                	>;
+        };
+	win_layer {
+            bindings = <
+            	&kp ESCAPE	&kp LC(X)    	&kp LC(V)     	&kp LC(C)       &kp LC(BSPC)	&kp UP      &kp LC(DEL)	&kp DEL
+                &kp LGUI    	&kp LSHIFT    	&kp LALT     	&kp LCTRL       &kp LEFT	&kp DOWN    &kp RIGHT	&none
+                                        	&kp TAB 	&none	        &trans	    &trans
                 	>;
         };
     };
