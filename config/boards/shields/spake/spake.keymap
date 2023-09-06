@@ -430,7 +430,7 @@
         alpha_layer {
             bindings = <
             	&kp M		&kp P    	&kp L       &kp D            &kp C		&kp R       &kp U		&kp G
-                &kp A    	&kp O    	&kp E	 	&tdiapo            &kp H		&kp T		&kp N		&kp S
+                &kp A    	&kp O    	&kp E	 	&kp I            &kp H		&kp T		&kp N		&kp S
                                         &kp LGUI 	&mo LNAV         &kp LSHIFT	&mo LSYM
                 	>;
         };
