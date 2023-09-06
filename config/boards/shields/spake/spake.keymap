@@ -115,26 +115,6 @@
                 = <&kp LG(RIGHT) &kp LG(LS(LEFT))>
                 ;
         };
-	iapo: i_apo {
-            label = "i_apostrophe";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-	    wait-ms = <40>;
-	    tap-ms = <40>;
-            bindings
-                = <&kp LS(I) &kp APOSTROPHE>
-                ;
-        };
-	ispace: i_space {
-            label = "i_space";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-	    wait-ms = <40>;
-	    tap-ms = <40>;
-            bindings
-                = <&kp LS(I) &kp SPACE>
-                ;
-        };
     };
 
     combos {
@@ -248,6 +228,12 @@
             key-positions = <5 12 13>;
 	    layers = <0>;
             bindings = <&wh>;
+        };
+	combo_apo {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+	    layers = <0>;
+            bindings = <&kp APOSTROPHE>;
         };
 	combo_tab2 {
             timeout-ms = <50>;
@@ -435,13 +421,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <400>;
             bindings = <&kp J>, <&kp SEMI>;
-        };
-	tdiapo: tap_dance_i_apo {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_I_APO";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp I>, <&ispace>, <&iapo>;
         };
     };
 
