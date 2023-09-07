@@ -65,16 +65,6 @@
                 = <&kp W &kp H>
                 ;
         };
-	ck: ck {
-            label = "ck digraph";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-	    wait-ms = <40>;
-	    tap-ms = <40>;
-            bindings
-                = <&kp C &kp K>
-                ;
-        };
 	carr: carriage_ret {
             label = "end_line_carriage_ret";
             compatible = "zmk,behavior-macro";
@@ -145,11 +135,11 @@
 	    layers = <0>;
             bindings = <&kp ENTER>;
         };
-	combo_q2 {
+	combo_q {
             timeout-ms = <50>;
             key-positions = <0 1 2 >;
 	    layers = <0>;
-            bindings = <&tdqcol>;
+            bindings = <&kp Q>;
         };
 	combo_change_window {
             timeout-ms = <50>;
@@ -185,7 +175,7 @@
             timeout-ms = <50>;
             key-positions = <2 10>;
 	    layers = <0>;
-            bindings = <&tdck>;
+            bindings = <&kp K>;
         };
 	combo_ret2 {
             timeout-ms = <50>;
@@ -193,11 +183,11 @@
 	    layers = <0>;
             bindings = <&kp ENTER>;
         };
-	combo_j2 {
+	combo_j {
             timeout-ms = <50>;
             key-positions = <5 6 7>;
 	    layers = <0>;
-            bindings = <&tdjsem>;
+            bindings = <&kp J>;
         };
 	combo_f {
             timeout-ms = <50>;
@@ -337,13 +327,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp N9>, <&kp F9>;
         };
-	tdck: tap_dance_ck {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_CK";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp K>, <&ck>;
-        };
     tdpar: tap_dance_par {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_PAR";
@@ -408,20 +391,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp EQUAL>, <&assign>;
         };
-	tdqcol: tap_dance_q_colon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_Q_COLON";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&kp Q>, <&kp COLON>;
-        };
-	tdjsem: tap_dance_j_semi {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_J_SEMI";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&kp J>, <&kp SEMI>;
-        };
     };
 
     keymap {
@@ -439,7 +408,7 @@
             bindings = <
             	&kp ESC		&kp LG(X)	&kp LG(V)   &kp LG(C)        &kp LA(BSPC) &kp UP    &kp LA(DEL)	&kp DEL
                 &kp RCTRL   &sk LSHIFT  &sk RALT 	&sk RGUI	     &kp LEFT	  &kp DOWN	&kp RIGHT	&kp LG(LS(SPACE))
-                                        &kp TAB 	&trans           &kp C_AC_SCROLL_DOWN	  &kp C_AC_SCROLL_UP
+                                        &none 	&trans           &kp TAB	  &none
                 	>;
         };
 
