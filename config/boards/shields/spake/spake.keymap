@@ -137,7 +137,7 @@
         };
 	combo_q {
             timeout-ms = <50>;
-            key-positions = <0 1 2 >;
+            key-positions = <1 2 3>;
 	    layers = <0>;
             bindings = <&kp Q>;
         };
@@ -185,7 +185,7 @@
         };
 	combo_j {
             timeout-ms = <50>;
-            key-positions = <5 6 7>;
+            key-positions = <4 5 6>;
 	    layers = <0>;
             bindings = <&kp J>;
         };
