@@ -408,7 +408,7 @@
             bindings = <
             	&kp ESC		&kp LG(X)	&kp LG(V)   &kp LG(C)        &kp LA(BSPC) &kp UP    &kp LA(DEL)	&kp DEL
                 &kp RCTRL   &sk LSHIFT  &sk RALT 	&sk RGUI	     &kp LEFT	  &kp DOWN	&kp RIGHT	&kp LG(LS(SPACE))
-                                        &none 	&trans           &kp TAB	  &none
+                                        &kp LG(Z) 	&trans           &kp TAB	  &none
                 	>;
         };
 
@@ -416,7 +416,7 @@
             bindings = <
             	&tdexat		&kp LT    	&kp GT      &tdpar           &tdbrc		&tdbkt      &kp SLASH	&kp BACKSLASH
                 &tdhapc    	&tddlht    	&tdstnd	    &kp COLON         &kp SEMI	&tdapqt		&kp MINUS	&tdequal
-                                        &none     	&kp LSHIFT       &kp TILDE	&trans
+                                        &kp LG(Z)     	&kp LSHIFT       &kp TILDE	&trans
                 	>;
         };
 
