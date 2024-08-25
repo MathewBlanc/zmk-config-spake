@@ -264,6 +264,14 @@
     };
 
         behaviors {
+    ht:	hold_tap {
+	compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+    };
     td1: tap_dance_1_F1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
@@ -406,7 +414,7 @@
 
         nav_layer {
             bindings = <
-            	&kp ESC		&kp LG(X)	&kp LG(V)   &kp LG(C)        &kp LA(BSPC) &kp UP    &kp LA(DEL)	&kp DEL
+            	&kp ESC		&ht F20 LG(X)	&ht F19 LG(V)   &ht F18 LG(C)        &kp LA(BSPC) &kp UP    &kp LA(DEL)	&kp DEL
                 &kp RCTRL   &sk LSHIFT  &sk RALT 	&sk RGUI	     &kp LEFT	  &kp DOWN	&kp RIGHT	&kp LG(LS(SPACE))
                                         &kp LG(Z) 	&trans           &kp TAB	  &none
                 	>;
