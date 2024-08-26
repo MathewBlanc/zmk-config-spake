@@ -266,21 +266,21 @@
         behaviors {
     tdxf20: tap_dance_cut_f20 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
+            label = "TAP_DANCE_cut";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LG(X)>, <&kp F20>;
         };
    tdvf19: tap_dance_paste_f19 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
+            label = "TAP_DANCE_paste";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LG(V)>, <&kp F19>;
         };
    tdcf18: tap_dance_copy {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
+            label = "TAP_DANCE_copy";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LG(C)>, <&kp F18>;
