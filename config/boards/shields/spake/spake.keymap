@@ -412,6 +412,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp EQUAL>, <&kp PLUS>, <&assign>;
         };
+	tdbspc_linedel: tap_dance_backspace_linedel {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BSPC_LINEDEL";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LA(BSPC)>, <&kp LG(BSPC)>;
+        };
     };
 
     keymap {
@@ -427,7 +434,7 @@
 
         nav_layer {
             bindings = <
-            	&kp ESC		&tdxf20	&tdvf19   &tdcf18        &kp LA(BSPC) &kp UP    &kp LA(DEL)	&kp DEL
+            	&kp ESC		&tdxf20	&tdvf19   &tdcf18        &tdbspc_linedel &kp UP    &kp LA(DEL)	&kp DEL
                 &kp RCTRL   &sk LSHIFT  &sk RALT 	&sk RGUI	     &kp LEFT	  &kp DOWN	&kp RIGHT	&kp LG(LS(SPACE))
                                         &kp LG(Z) 	&trans           &kp TAB	  &none
                 	>;
