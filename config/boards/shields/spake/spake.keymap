@@ -416,7 +416,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BSPC_LINEDEL";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&kp LA(BSPC)>, <&kp LG(BSPC)>;
         };
     };
